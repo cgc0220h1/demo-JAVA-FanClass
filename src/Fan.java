@@ -1,6 +1,6 @@
 public class Fan {
     private int speed = 1;
-    private boolean status = false;
+    private boolean on = false;
     private double radius = 5;
     private String color = "blue";
 
@@ -8,8 +8,8 @@ public class Fan {
         return this.speed;
     }
 
-    public boolean getStatus() {
-        return this.status;
+    public boolean isOn() {
+        return this.on;
     }
 
     public double getRadius() {
@@ -25,7 +25,7 @@ public class Fan {
     }
 
     public void setStatus(boolean status) {
-        this.status = status;
+        this.on = status;
     }
 
     public void setRadius(double radius) {
@@ -41,7 +41,7 @@ public class Fan {
 
     @Override
     public String toString() {
-        if (this.status) {
+        if (this.on) {
             return this.speed + " " + this.color + " " + this.radius;
         } else {
             return  this.color + " " + this.radius + " " + "fan is off";
